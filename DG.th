@@ -1,28 +1,11 @@
-# This file was automatically generated using the GetComponents script.
+# Component list for AEI vacuum simulations <http://numrel.aei.mpg.de/>
+# $Revision$
+# $Date$
+# $HeadURL$
 
 !CRL_VERSION = 1.0
 
-
-# Component list: Cactus/thornlists/einsteintoolkit_basic.th
-
-
-
-# Component list: Cactus/thornlists/einsteintoolkit_basic.th
-
-
-
-# Component list: Cactus/thornlists/einsteintoolkit_basic.th
-
-
-
-# Component list: Cactus/thornlists/einsteintoolkit_basic.th
-
-
-
-# Component list: einsteintoolkit.th
-
-
-!DEFINE ROOT = Cactus
+!DEFINE ROOT = AEIDevelopment
 !DEFINE ARR  = $ROOT/arrangements
 !DEFINE COMPONENTLIST_TARGET = $ROOT/thornlists/
 
@@ -108,73 +91,31 @@
 !AUTH_URL = https://svn.cactuscode.org/arrangements/$1/$2/trunk
 !URL      = http://svn.cactuscode.org/arrangements/$1/$2/trunk
 !CHECKOUT =
-CactusArchive/ADM # deprecated
-
 CactusBase/Boundary
 CactusBase/CartGrid3D
 CactusBase/CoordBase
 CactusBase/Fortran
 CactusBase/InitBase
-CactusBase/IOASCII
 CactusBase/IOBasic
 CactusBase/IOUtil
 CactusBase/SymBase
 CactusBase/Time
 
-CactusConnect/HTTPD
-CactusConnect/HTTPDExtra
-CactusConnect/Socket
-
-CactusDoc/CoreDoc
-
-CactusElliptic/EllBase
-#CactusElliptic/EllPETSc
-CactusElliptic/EllSOR
-
-CactusExamples/DemoInterp
-CactusExamples/FleshInfo
-CactusExamples/HelloWorld
-CactusExamples/IDWaveMoL
-CactusExamples/SampleBoundary
-CactusExamples/SampleIO
-CactusExamples/TimerInfo
-CactusExamples/WaveMoL
-CactusExamples/WaveToy1DF77
-CactusExamples/WaveToy2DF77
-#CactusExamples/WaveToyOpenCL
-
-CactusIO/IOJpeg
-
-CactusNumerical/Cartoon2D
-CactusNumerical/Dissipation
-CactusNumerical/InterpToArray
 CactusNumerical/LocalInterp
-CactusNumerical/LocalReduce
 CactusNumerical/MoL
-CactusNumerical/Noise
-CactusNumerical/Norms
 CactusNumerical/Periodic
 CactusNumerical/ReflectionSymmetry
 CactusNumerical/RotatingSymmetry180
 CactusNumerical/RotatingSymmetry90
 CactusNumerical/Slab
-CactusNumerical/SlabTest
 CactusNumerical/SpaceMask
 CactusNumerical/SphericalSurface
-
-CactusPUGH/PUGH
-CactusPUGH/PUGHInterp
-CactusPUGH/PUGHReduce
-CactusPUGH/PUGHSlab
-
-CactusPUGHIO/IOHDF5
-CactusPUGHIO/IOHDF5Util
+CactusNumerical/Noise # Added by hand, copied from the officil ET release
 
 #CactusTest/TestAllTypes
 CactusTest/TestArrays
 CactusTest/TestComplex
 CactusTest/TestCoordinates
-CactusTest/TestFortranCrayPointers
 CactusTest/TestFortranDependencies1
 CactusTest/TestFortranDependencies2
 CactusTest/TestFpointerNULL
@@ -184,8 +125,6 @@ CactusTest/TestInclude1
 CactusTest/TestInclude2
 CactusTest/TestLocalReduce
 CactusTest/TestLoop
-CactusTest/TestMath
-CactusTest/TestPar
 CactusTest/TestReduce
 CactusTest/TestSchedule
 CactusTest/TestStrings
@@ -193,27 +132,11 @@ CactusTest/TestTable
 CactusTest/TestTimers
 CactusTest/TestTypes
 
-#CactusUtils/Accelerator
 CactusUtils/Formaline
 CactusUtils/NaNChecker
-CactusUtils/Nice
 CactusUtils/NoMPI
-#CactusUtils/OpenCLRunTime
 CactusUtils/TerminationTrigger
 CactusUtils/TimerReport
-
-CactusWave/IDScalarWave
-CactusWave/IDScalarWaveC
-CactusWave/IDScalarWaveCXX
-CactusWave/IDScalarWaveElliptic
-CactusWave/WaveBinarySource
-CactusWave/WaveToyC
-CactusWave/WaveToyCXX
-CactusWave/WaveToyExtra
-CactusWave/WaveToyF77
-CactusWave/WaveToyF90
-CactusWave/WaveToyFreeF90
-
 
 
 # The Einstein Toolkit
@@ -222,78 +145,25 @@ CactusWave/WaveToyFreeF90
 !AUTH_URL = https://svn.einsteintoolkit.org/cactus/$1/$2/trunk
 !URL      = http://svn.einsteintoolkit.org/cactus/$1/$2/trunk
 !CHECKOUT =
-EinsteinAnalysis/ADMAnalysis
-EinsteinAnalysis/ADMConstraints # deprecated, use ML_ADMConstraints
-EinsteinAnalysis/AHFinder
+EinsteinAnalysis/ADMConstraints
 EinsteinAnalysis/AHFinderDirect
-EinsteinAnalysis/CalcK
-EinsteinAnalysis/EHFinder
-EinsteinAnalysis/Extract
-EinsteinAnalysis/Hydro_Analysis
 EinsteinAnalysis/Multipole
 EinsteinAnalysis/WeylScal4
 
 EinsteinBase/ADMBase
-EinsteinBase/ADMCoupling # deprecated 
-EinsteinBase/ADMMacros # to be deprecated, don't use for new code
-EinsteinBase/Constants
+EinsteinBase/ADMCoupling
+EinsteinBase/ADMMacros
 EinsteinBase/CoordGauge
-EinsteinBase/EOS_Base
-EinsteinBase/HydroBase
 EinsteinBase/StaticConformal
 EinsteinBase/TmunuBase
 
-EinsteinEOS/EOS_Hybrid
-EinsteinEOS/EOS_IdealFluid
-EinsteinEOS/EOS_Omni
-EinsteinEOS/EOS_Polytrope
-
-EinsteinEvolve/GRHydro
-EinsteinEvolve/LegoExcision
 EinsteinEvolve/NewRad
 
-EinsteinInitialData/DistortedBHIVP
 EinsteinInitialData/Exact
-EinsteinInitialData/GRHydro_InitData
-EinsteinInitialData/Hydro_InitExcision
-EinsteinInitialData/IDAnalyticBH
-EinsteinInitialData/IDAxiBrillBH
-EinsteinInitialData/IDAxiOddBrillBH
-EinsteinInitialData/IDBrillData
-EinsteinInitialData/IDConstraintViolate
-EinsteinInitialData/IDFileADM
 EinsteinInitialData/IDLinearWaves
-EinsteinInitialData/Meudon_Bin_BH
-EinsteinInitialData/Meudon_Bin_NS
-EinsteinInitialData/Meudon_Mag_NS
-EinsteinInitialData/NoExcision
-EinsteinInitialData/RotatingDBHIVP
-EinsteinInitialData/TOVSolver
 EinsteinInitialData/TwoPunctures
 
-EinsteinUtils/SetMask_SphericalSurface
 EinsteinUtils/TGRtensor
-
-PITTNullCode/NullConstr
-PITTNullCode/NullDecomp
-PITTNullCode/NullEvolve
-PITTNullCode/NullExact
-PITTNullCode/NullGrid
-PITTNullCode/NullInterp
-PITTNullCode/NullNews
-PITTNullCode/NullPsiInt
-PITTNullCode/NullSHRExtract
-PITTNullCode/NullVars
-PITTNullCode/SphericalHarmonicDecomp
-PITTNullCode/SphericalHarmonicRecon
-
-!TARGET   = $ARR
-!TYPE     = git
-!AUTH_URL = git@github.com:rhaas80/Outflow.git
-!URL      = git://github.com/rhaas80/Outflow.git
-!REPO_PATH= ../$2
-!CHECKOUT = 
-EinsteinAnalysis/Outflow
 
 !TARGET   = $ARR
 !TYPE     = git
@@ -317,33 +187,12 @@ EinsteinExact/Vaidya2
 !URL      = http://svn.cactuscode.org/projects/$1/$2/trunk
 !CHECKOUT =
 ExternalLibraries/BLAS
-ExternalLibraries/FFTW3
 ExternalLibraries/GSL
 ExternalLibraries/HDF5
-ExternalLibraries/hwloc
 ExternalLibraries/LAPACK
-ExternalLibraries/libjpeg
-ExternalLibraries/LORENE
 ExternalLibraries/MPI
-#ExternalLibraries/OpenCL
-ExternalLibraries/OpenSSL
-#ExternalLibraries/PETSc
 ExternalLibraries/zlib
-
-TAT/TATelliptic
-#TAT/TATPETSc
-
-# Boost library (http://www.boost.org/)
-# Boost is a high quality library that extends and anticipates C++ language
-# development. It is very useful for many C++ projects.
-#!TARGET   = $ARR
-#!TYPE     = git
-#!AUTH_URL = git@github.com:dradice/Boost.git
-#!URL      = git://github.com/dradice/Boost.git
-#!REPO_PATH = ../$2
-#!CHECKOUT =
-#ExternalLibraries/Boost
-
+ExternalLibraries/hwloc
 
 # Various thorns from the AEI
 !TARGET   = $ARR
@@ -351,12 +200,13 @@ TAT/TATelliptic
 !AUTH_URL = https://svn.aei.mpg.de/numrel/$1/$2/trunk
 !URL      = http://svn.aei.mpg.de/numrel/$1/$2/trunk
 !CHECKOUT =
-AEIThorns/ADMMass
 AEIThorns/AEILocalInterp
+AEIThorns/ManualTermination
 AEIThorns/PunctureTracker
 AEIThorns/SystemStatistics
-AEIThorns/Trigger
+AEIThorns/TensorTypes
 
+AEIDevelopment/WaveExtract
 
 
 # Various thorns from LSU
@@ -364,7 +214,6 @@ AEIThorns/Trigger
 !TYPE     = svn
 !URL      = https://svn.cct.lsu.edu/repos/numrel/$1/$2/trunk
 !CHECKOUT =
-LSUThorns/PeriodicCarpet
 LSUThorns/QuasiLocalMeasures
 LSUThorns/SummationByParts
 LSUThorns/Vectors
@@ -398,7 +247,6 @@ McLachlan/ML_CCZ4
 McLachlan/ML_CCZ4_Helper
 McLachlan/ML_CCZ4_Test
 McLachlan/ML_WaveToy
-#McLachlan/ML_WaveToy_CL
 McLachlan/ML_WaveToy_Test
 
 
@@ -408,6 +256,11 @@ McLachlan/ML_WaveToy_Test
 !TYPE     = git
 !AUTH_URL = carpetgit@carpetcode.org:carpet
 !URL      = git://carpetcode.org/carpet
+# For the (old) hg version of Carpet, comment out the previous three
+# lines, and uncomment the next three lines
+#!TYPE     = hg
+#!AUTH_URL = ssh://carpetgit@carpetcode.org
+#!URL      = http://www.carpetcode.org/carpet
 !CHECKOUT = Carpet/doc
 Carpet/Carpet
 Carpet/CarpetEvolutionMask
@@ -424,13 +277,208 @@ Carpet/CarpetRegrid
 Carpet/CarpetRegrid2
 Carpet/CarpetSlab
 Carpet/CarpetTracker
-Carpet/CycleClock
 Carpet/LoopControl
+Carpet/CycleClock
 Carpet/Timers
 
-
-
-# Private thorns
+# CTGamma BSSN evolution code
 !TARGET   = $ARR
-!TYPE     = ignore
+!TYPE     = git
+!URL      = llama-dev@llamacode.org:CTGamma
+!AUTH_URL = llama-dev@llamacode.org:CTGamma
+!REPO_PATH= $2
 !CHECKOUT = 
+CTGamma/CartesianCoordinates
+CTGamma/CTGBase
+CTGamma/CTGConstraints
+CTGamma/CTGEvolution
+CTGamma/CTGGauge
+CTGamma/CTGRadiativeBC
+CTGamma/Psiclops
+
+# Llama multi-patch code
+!TARGET   = $ARR
+!TYPE     = git
+!URL      = llama-dev@llamacode.org:Llama
+!AUTH_URL = llama-dev@llamacode.org:Llama
+!REPO_PATH= $2
+!CHECKOUT = 
+Llama/ADMDerivatives
+Llama/Coordinates
+Llama/GlobalDerivative
+# Llama/Interpolate
+Llama/Interpolate2
+Llama/SphericalSlice
+Llama/WaveExtractL
+Llama/WorldTube
+
+
+# WhiskyDevs repositories:
+
+
+!TARGET   = $ARR
+!TYPE     = git
+!AUTH_URL = git@bitbucket.org:whiskydevs/AdvectHRSC.git
+!URL      = git@bitbucket.org:whiskydevs/AdvectHRSC.git
+!REPO_PATH = ../$2
+!CHECKOUT =
+WhiskyDevs/AdvectHRSC
+
+
+!TARGET   = $ARR
+!TYPE     = git
+!AUTH_URL = git@bitbucket.org:whiskydevs/BurgersHRSC.git
+!URL      = git@bitbucket.org:whiskydevs/BurgersHRSC.git
+!REPO_PATH = ../$2
+!CHECKOUT =
+#WhiskyDevs/BurgersHRSC
+
+
+!TARGET   = $ARR
+!TYPE     = git
+!AUTH_URL = git@bitbucket.org:whiskydevs/Calypso.git
+!URL      = git@bitbucket.org:whiskydevs/Calypso.git
+!REPO_PATH = $2
+!CHECKOUT =
+#Calypso/BNSTrackerGen
+#Calypso/EOS_Barotropic
+#Calypso/EOS_Thermal
+#Calypso/EOS_Thermal_Hybrid
+#Calypso/EOS_Thermal_Idealgas
+#Calypso/ID_Switch_EOS
+#Calypso/LoreneID
+#Calypso/PizzaBase
+#Calypso/PizzaIDBase
+#Calypso/PizzaNumUtils
+#Calypso/PizzaTOV
+#Calypso/Volomnia
+
+
+!TARGET   = $ARR
+!TYPE     = git
+!AUTH_URL = git@bitbucket.org:whiskydevs/CharonCode.git
+!URL      = git@bitbucket.org:whiskydevs/CharonCode.git
+!REPO_PATH = ../$2
+!CHECKOUT =
+#WhiskyDevs/CharonCode
+
+
+!TARGET   = $ARR
+!TYPE     = git
+!AUTH_URL = git@bitbucket.org:whiskydevs/CPPUtils.git
+!URL      = git@bitbucket.org:whiskydevs/CPPUtils.git
+!REPO_PATH = ../$2
+!CHECKOUT =
+WhiskyDevs/CPPUtils
+
+
+!TARGET   = $ARR
+!TYPE     = git
+!AUTH_URL = git@bitbucket.org:whiskydevs/EOS_Simple.git
+!URL      = git@bitbucket.org:whiskydevs/EOS_Simple.git
+!REPO_PATH = ../$2
+!CHECKOUT =
+WhiskyDevs/EOS_Simple
+
+
+!TARGET   = $ARR
+!TYPE     = git
+!AUTH_URL = git@bitbucket.org:whiskydevs/FDCore.git
+!URL      = git@bitbucket.org:whiskydevs/FDCore.git
+!REPO_PATH = ../$2
+!CHECKOUT =
+WhiskyDevs/FDCore
+
+
+!TARGET   = $ARR
+!TYPE     = git
+!AUTH_URL = git@bitbucket.org:whiskydevs/Filter.git
+!URL      = git@bitbucket.org:whiskydevs/Filter.git
+!REPO_PATH = ../$2
+!CHECKOUT =
+WhiskyDevs/Filter
+
+
+!TARGET   = $ARR
+!TYPE     = git
+!AUTH_URL = git@bitbucket.org:whiskydevs/HRSCCore.git
+!URL      = git@bitbucket.org:whiskydevs/HRSCCore.git
+!REPO_PATH = ../$2
+!CHECKOUT =
+WhiskyDevs/HRSCCore
+
+!TARGET   = $ARR
+!TYPE     = git
+!AUTH_URL = git@bitbucket.org:whiskydevs/MoLIMEX.git
+!URL      = git@bitbucket.org:whiskydevs/MoLIMEX.git
+!REPO_PATH = ../$2
+!CHECKOUT =
+#WhiskyDevs/MoLIMEX
+
+
+!TARGET   = $ARR
+!TYPE     = git
+!AUTH_URL = git@bitbucket.org:whiskydevs/RadiationBase.git
+!URL      = git@bitbucket.org:whiskydevs/RadiationBase.git
+!REPO_PATH = ../$2
+!CHECKOUT =
+WhiskyDevs/RadiationBase
+
+
+!TARGET   = $ARR
+!TYPE     = git
+!AUTH_URL = git@bitbucket.org:whiskydevs/SDGMGrid.git
+!URL      = git@bitbucket.org:whiskydevs/SDGMGrid.git
+!REPO_PATH = ../$2
+!CHECKOUT =
+WhiskyDevs/SDGMGrid
+
+
+# Templated Hydro Code:
+!TARGET   = $ARR
+!TYPE     = git
+!AUTH_URL = git@bitbucket.org:whiskydevs/THCode.git
+!URL      = git@bitbucket.org:whiskydevs/THCode.git
+!REPO_PATH = $2
+!CHECKOUT =
+#THCode/THC_Analysis
+#THCode/THC_Config_Base
+#THCode/THC_Config_FD_MP5_RF
+#THCode/THC_Color
+#THCode/THC_Core
+#THCode/THC_Forcing
+#THCode/THC_InitialData
+#THCode/THC_Tracer
+
+
+!TARGET   = $ARR
+!TYPE     = git
+!AUTH_URL = git@bitbucket.org:whiskydevs/WaveToyDGFE.git
+!URL      = git@bitbucket.org:whiskydevs/WaveToyDGFE.git
+!REPO_PATH = ../$2
+!CHECKOUT =
+WhiskyDevs/WaveToyDGFE
+
+!TARGET   = $ARR
+!TYPE     = git
+!AUTH_URL = git@bitbucket.org:whiskydevs/WaveToyDGFEStiff.git
+!URL      = git@bitbucket.org:whiskydevs/WaveToyDGFEStiff.git
+!REPO_PATH = ../$2
+!CHECKOUT =
+#WhiskyDevs/WaveToyDGFEStiff
+
+
+# Boost library (http://www.boost.org/)
+# Boost is a high quality library that extends and anticipates C++ language
+# development. It is very useful for many C++ projects.
+!TARGET   = $ARR
+!TYPE     = git
+!AUTH_URL = git@github.com:dradice/Boost.git
+!URL      = git://github.com/dradice/Boost.git
+!REPO_PATH = ../$2
+!CHECKOUT =
+ExternalLibraries/Boost
+
+# First order Z4 thorn (finite difference)
+FOZ4/ML_FOZ4
+FOZ4/ML_FOZ4_Helper

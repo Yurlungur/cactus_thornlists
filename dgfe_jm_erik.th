@@ -3,6 +3,14 @@
 !CRL_VERSION = 1.0
 
 
+# Component list: Cactus/thornlists/dgfe_jm.th
+
+
+
+# Component list: Cactus/thornlists/dgfe_jm.th
+
+
+
 # Component list: ./einsteintoolkit.th
 
 
@@ -74,10 +82,12 @@ CactusBase/IOUtil
 CactusBase/SymBase
 CactusBase/Time
 
+CactusNumerical/Dissipation
 CactusNumerical/InterpToArray
 CactusNumerical/LocalInterp
 CactusNumerical/LocalReduce
 CactusNumerical/MoL
+CactusNumerical/Noise
 CactusNumerical/Norms
 CactusNumerical/Periodic
 CactusNumerical/ReflectionSymmetry
@@ -195,29 +205,35 @@ KrancNumericalTools/GenericFD
 
 
 
-# McLachlan, the spacetime code
+# McLachlan, the spacetime code (master branch)
 !TARGET   = $ARR
 !TYPE     = git
 !AUTH_URL = carpetgit@carpetcode.org:McLachlan
 !URL      = git://carpetcode.org/McLachlan
 !REPO_PATH= $2
-!CHECKOUT = McLachlan/doc McLachlan/m McLachlan/par
-# McLachlan/ML_BSSN
-# McLachlan/ML_BSSN_Helper
-# McLachlan/ML_BSSN_O2
-# McLachlan/ML_BSSN_O2_Helper
-# McLachlan/ML_BSSN_O8
-# McLachlan/ML_BSSN_O8_Helper
-# McLachlan/ML_BSSN_MP_O8
-# McLachlan/ML_BSSN_MP_O8_Helper
-# McLachlan/ML_BSSN_Test
-# McLachlan/ML_ADMConstraints
-#McLachlan/ML_FOZ4
-# McLachlan/ML_FOZ4_Helper
-# McLachlan/ML_FOZ4_DG_P5
-# McLachlan/ML_FOZ4_DG_P5_Helper
-# McLachlan/ML_WavetoyDGFE
+McLachlan/ML_BSSN
+McLachlan/ML_BSSN_Helper
+McLachlan/CL_BSSN
+McLachlan/CL_BSSN_Helper
+McLachlan/ML_ADMConstraints
 
+# McLachlan_dgfe, the spacetime code (DG branch)
+!TARGET   = $ARR
+!TYPE     = git
+!AUTH_URL = carpetgit@carpetcode.org:McLachlan
+!URL      = git://carpetcode.org/McLachlan
+!REPO_PATH= $2
+!REPO_BRANCH = dgfe
+!CHECKOUT = McLachlan_dgfe/doc McLachlan_dgfe/m McLachlan_dgfe/par
+McLachlan_dgfe/ML_FOZ4
+McLachlan_dgfe/ML_FOZ4_Helper
+McLachlan_dgfe/ML_FOZ4_DG_P4
+McLachlan_dgfe/ML_FOZ4_DG_P4_Helper
+McLachlan_dgfe/ML_WaveToyDGFE
+McLachlan_dgfe/ML_WaveToyFD
+McLachlan_dgfe/ML_DGFE_Test
+McLachlan_dgfe/CL_BSSN_DG_P4
+McLachlan_dgfe/CL_BSSN_DG_P4_Helper
 
 # Carpet, the AMR driver
 !TARGET   = $ARR
@@ -260,7 +276,7 @@ Llama/SphericalSlice
 # EinsteinExact thorns
 !TARGET   = $ARR
 !TYPE     = git
-!URL      = git://github.com/barrywardell/EinsteinExact.git
+!URL      = git@github.com:barrywardell/EinsteinExact.git
 #!URL     = https://github.com/barrywardell/EinsteinExact.git
 !AUTH_URL = git@github.com/barrywardell/EinsteinExact.git
 !REPO_PATH= $2
@@ -290,7 +306,7 @@ ScalarWave/ScalarWaveKerrSchild
 ScalarWave/ScalarWaveMinkowski
 
 # ScalarWave
-!TARGET   = $ARR/DGFE
+!TARGET   = $ARR
 !TYPE     = git
 !URL = git@bitbucket.org:dradice/advecthrsc.git
 !AUTH_URL = git@bitbucket.org/dradice/advecthrsc.git
@@ -298,24 +314,16 @@ ScalarWave/ScalarWaveMinkowski
 !CHECKOUT = 
 DGFE/AdvectHRSC
 
-# !TARGET   = $ARR/DGFE
-# !TYPE     = git
-# !URL = https://github.com/dradice/boost.git
-# !AUTH_URL = git@github.com/dradice/boost.git
-# !CHECKOUT = .
-# !NAME = Boost
-# DGFE/Boost
-
 # Boost
 !TARGET   = $ARR
 !TYPE     = git
 !AUTH_URL = git@github.com:dradice/Boost.git
-!URL      = git://github.com/dradice/Boost.git
+!URL      = git@github.com/dradice/Boost.git
 !REPO_PATH = ../$2
 !CHECKOUT =
 ExternalLibraries/Boost
 
-!TARGET   = $ARR/DGFE
+!TARGET   = $ARR
 !TYPE     = git
 !URL = git@bitbucket.org:dradice/cpputils.git
 !AUTH_URL = git@bitbucket.org/dradice/cpputils.git
@@ -323,9 +331,7 @@ ExternalLibraries/Boost
 !CHECKOUT = 
 DGFE/CPPUtils
 
-
-
-!TARGET   = $ARR/DGFE
+!TARGET   = $ARR
 !TYPE     = git
 !URL = git@bitbucket.org:dradice/fdcore.git
 !AUTH_URL = git@bitbucket.org/dradice/fdcore.git
@@ -333,7 +339,7 @@ DGFE/CPPUtils
 !CHECKOUT = 
 DGFE/FDCore
 
-!TARGET   = $ARR/DGFE
+!TARGET   = $ARR
 !TYPE     = git
 !URL = git@bitbucket.org:dradice/hrsccore.git
 !AUTH_URL = git@bitbucket.org/dradice/hrsccore.git
@@ -341,7 +347,7 @@ DGFE/FDCore
 !CHECKOUT = 
 DGFE/HRSCCore
 
-!TARGET   = $ARR/DGFE
+!TARGET   = $ARR
 !TYPE     = git
 !URL = git@bitbucket.org:dradice/sdgmgrid.git
 !AUTH_URL = git@bitbucket.org/dradice/sdgmgrid.git
@@ -350,35 +356,10 @@ DGFE/HRSCCore
 DGFE/SDGMGrid
 
 
-!TARGET   = $ARR/DGFE
+!TARGET   = $ARR
 !TYPE     = git
 !URL = git@bitbucket.org:dradice/wavetoydgfe.git
 !AUTH_URL = git@bitbucket.org/dradice/wavetoydgfe.git
 !NAME = WaveToyDGFE
 !CHECKOUT = 
 DGFE/WaveToyDGFE
-
-
-!TARGET = $ARR/Carlile
-!TYPE = ignore
-!REPO_PATH = $1/$2
-!NAME = Carlile
-!CHECKOUT =
-Carlile/CL_BSSN
-Carlile/CL_BSSN_Helper
-
-
-!TARGET = $ARR/McLachlan_dgfe
-!TYPE = ignore
-!REPO_PATH = $1/$2
-!NAME = McLachlan_dgfe
-!CHECKOUT = 
-#McLachlan_dgfe/m
-#McLachlan_dgfe/par
-#McLachlan_dgfe/ML_Wavetoy
-McLachlan_dgfe/CL_BSSN_DG_P5
-McLachlan_dgfe/CL_BSSN_DG_P5_Helper
-McLachlan_dgfe/ML_FOZ4
-McLachlan_dgfe/ML_FOZ4_DG_P5 # Zeta 4 formulation
-McLachlan_dgfe/ML_FOZ4_DG_P5_Helper
-McLachlan_dgfe/ML_WaveToyDGFE

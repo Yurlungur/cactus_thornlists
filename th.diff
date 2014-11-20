@@ -1,0 +1,372 @@
+1c1,4
+< # This file was automatically generated using the GetComponents script.
+---
+> # Component list for the Einstein Toolkit <http://einsteintoolkit.org/>
+> # $Revision: 270 $
+> # $Date: 2014-02-05 10:24:09 -0500 (Wed, 05 Feb 2014) $
+> # $HeadURL: https://svn.einsteintoolkit.org/manifest/trunk/einsteintoolkit.th $
+5,8d7
+< 
+< # Component list: einsteintoolkit.th
+< 
+< 
+94,96c93
+< !CHECKOUT =
+< CactusArchive/ADM # deprecated
+< 
+---
+> !CHECKOUT = CactusElliptic/EllPETSc CactusExamples/WaveToyCUDA CactusExamples/WaveToyOpenCL CactusTest/TestAllTypes CactusUtils/Accelerator CactusUtils/OpenCLRunTime
+115c112
+< #CactusElliptic/EllPETSc
+---
+> CactusElliptic/EllPETSc
+127a125
+> #CactusExamples/WaveToyCUDA
+180a179
+> CactusUtils/Dylib
+181a181
+> CactusUtils/MemSpeed
+190c190
+< CactusWave/IDScalarWaveC
+---
+> #CactusWave/IDScalarWaveC
+194c194
+< CactusWave/WaveToyC
+---
+> #CactusWave/WaveToyC
+232c232
+< EinsteinEOS/EOS_Omni
+---
+> #EinsteinEOS/EOS_Omni
+235,236c235
+< EinsteinEvolve/GRHydro
+< EinsteinEvolve/LegoExcision
+---
+> #EinsteinEvolve/GRHydro
+273a273,274
+> 
+> 
+286c287
+< !REPO_PATH= $2
+---
+> !REPO_PATH = $2
+296a298
+> 
+302c304
+< !CHECKOUT =
+---
+> !CHECKOUT = ExternalLibraries/OpenCL ExternalLibraries/PETSc
+303a306,308
+> ExternalLibraries/CGNS
+> ExternalLibraries/curl
+> ExternalLibraries/F5
+304a310
+> ExternalLibraries/flickcurl
+306a313
+> ExternalLibraries/HYPRE
+309a317
+> ExternalLibraries/libxml2
+310a319
+> ExternalLibraries/Lua
+313a323,324
+> #ExternalLibraries/PAPI
+> #ExternalLibraries/pciutils
+316a328
+> TAT/NaNCatcher
+318c330
+< #TAT/TATPETSc
+---
+> TAT/TATPETSc
+320,328c332,340
+< # Boost library (http://www.boost.org/)
+< # Boost is a high quality library that extends and anticipates C++ language
+< # development. It is very useful for many C++ projects.
+< #!TARGET   = $ARR
+< #!TYPE     = git
+< #!AUTH_URL = git@github.com:dradice/Boost.git
+< #!URL      = git://github.com/dradice/Boost.git
+< #!REPO_PATH = ../$2
+< #!CHECKOUT =
+---
+> 
+> 
+> # Boost
+> !TARGET   = $ARR
+> !TYPE     = git
+> !AUTH_URL = git@github.com:dradice/Boost.git
+> !URL      = git://github.com/dradice/Boost.git
+> !REPO_PATH = ../$2
+> !CHECKOUT =
+331a344
+> 
+337a351,359
+> # AEIDevelopment/IsolatedHorizon
+> # AEIDevelopment/Kruskal
+> # #AEIDevelopment/MultiPatch
+> # #AEIDevelopment/MultiPatchWaveToy
+> # #AEIDevelopment/PenaltyPatchBoundary
+> # AEIDevelopment/PsiKadelia
+> # AEIDevelopment/Vaidya
+> # AEIDevelopment/WaveExtract
+> 
+339a362
+> #AEIThorns/BSSN_MoL
+341a365
+> AEIThorns/TensorTypes
+350a375,385
+> # LSUDevelopment/FiniteElementing
+> # LSUDevelopment/HyperWaveFE
+> # LSUDevelopment/SphericalHarmonics
+> # LSUDevelopment/WaveToyNoGhostsPETSc
+> # LSUDevelopment/ZerilliReloaded
+> # 
+> LSUThorns/CPUID
+> LSUThorns/DGEMM
+> LSUThorns/Flickr
+> #LSUThorns/InterspersedStencils
+> LSUThorns/NSTracker
+352a388
+> LSUThorns/Refluxing
+353a390
+> LSUThorns/Twitter
+357a395,402
+> # Various thorns from Soton
+> !TARGET   = $ARR
+> !TYPE     = ignore
+> !CHECKOUT = 
+> #SotonThorns/AMRCurvature
+> 
+> 
+> 
+363c408
+< !REPO_PATH= Auxiliary/Cactus
+---
+> !REPO_PATH = Auxiliary/Cactus
+369c414
+< # McLachlan, the spacetime code
+---
+> # McLachlan, the BSSN spacetime code
+374,375c419,421
+< !REPO_PATH= $2
+< !CHECKOUT = McLachlan/doc McLachlan/m McLachlan/par
+---
+> !REPO_PATH = $2
+> !CHECKOUT = McLachlan/doc McLachlan/m McLachlan/par McLachlan/ML_WaveToy_CL
+> McLachlan/ML_ADM
+377a424
+> #McLachlan/ML_BSSNS2
+378a426,429
+> #McLachlan/ML_BSSN_bench
+> #McLachlan/ML_BSSN_bench_Helper
+> #McLachlan/ML_BSSN_CL
+> #McLachlan/ML_BSSN_CL_Helper
+379a431,432
+> #McLachlan/ML_BSSN_NV
+> #McLachlan/ML_BSSN_NV_Helper
+384,386c437,463
+< McLachlan/ML_WaveToy
+< #McLachlan/ML_WaveToy_CL
+< McLachlan/ML_WaveToy_Test
+---
+> # McLachlan/ML_MaxwellS2
+> # McLachlan/ML_WaveToy
+> # #McLachlan/ML_WaveToy_CL
+> # McLachlan/ML_WaveToy_Test
+> # McLachlan/ML_WaveToyFO
+> # McLachlan/ML_WaveToyMetricS2
+> # McLachlan/ML_WaveToyS2
+> 
+> # DG METHODS STUFF
+> McLachlan_dgfe/CL_BSSN_DG_P5
+> McLachlan_dgfe/CL_BSSN_DG_P5_Helper
+> #McLachlan_dgfe/ML_FOZ4
+> pMcLachlan_dgfe/ML_FOZ4_DG_P5 # Zeta 4 formulation
+> McLachlan_dgfe/ML_FOZ4_DG_P5_Helper
+> McLachlan_dgfe/ML_WaveToyDGFE
+> 
+> 
+> 
+> # Carlile, the first-order BSSN spacetime code
+> !TARGET   = $ARR
+> !TYPE     = hg
+> !AUTH_URL = ssh://carpetmercurial@carpetcode.org/Carlile
+> !URL      = ssh://carpetmercurial@carpetcode.org/Carlile
+> !REPO_PATH = $2
+> !CHECKOUT = Carlile/m Carlile/par
+> Carlile/CL_BSSN
+> Carlile/CL_BSSN_Helper
+412a490
+> Carpet/Requirements
+414a493,510
+> CarpetDev/CarpetIOF5
+> CarpetDev/CarpetIONirvana
+> 
+> # CarpetExtra/AMRToy
+> # CarpetExtra/CarpetCCTest
+> # CarpetExtra/CarpetIntegrateTest
+> # CarpetExtra/CarpetProlongateTest
+> # CarpetExtra/CarpetRegridTest
+> # CarpetExtra/HighOrderWaveTest
+> # CarpetExtra/Nirvana
+> # CarpetExtra/ReductionTest
+> # CarpetExtra/ReductionTest2
+> # CarpetExtra/ReductionTest3
+> # CarpetExtra/RegridSyncTest
+> # #CarpetExtra/TestBBoxSet2
+> # CarpetExtra/TestCarpetGridInfo
+> # CarpetExtra/TestLoopControl
+> 
+417c513
+< # Private thorns
+---
+> # Additional Carpet related thorns
+419,420c515,660
+< !TYPE     = ignore
+< !CHECKOUT = 
+---
+> !TYPE     = cvs
+> !URL      = eschnett@relativity.phys.lsu.edu:/home/perturbed/cvsroot
+> !CHECKOUT =
+> #CarpetThorns/LSUPETSc
+> #CarpetThorns/LSUPoisson
+> #CarpetThorns/Lichnerowicz
+> 
+> 
+> 
+> # Llama
+> !TARGET   = $ARR
+> !TYPE     = git
+> !URL      = git@bitbucket.org:llamacode/llama.git
+> !REPO_PATH = $2
+> !CHECKOUT = Llama/ParFiles Llama/README Llama/Thornlists Llama/doc
+> Llama/ADMDerivatives
+> Llama/Coordinates
+> Llama/GlobalDerivative
+> Llama/HarmonicDecomposition
+> Llama/Interpolate2
+> Llama/SphericalSlice
+> Llama/WaveExtractL
+> Llama/WorldTube
+> 
+> 
+> 
+> # # CTGamma
+> # !TARGET   = $ARR
+> # !TYPE     = git
+> # !URL      = git@bitbucket.org:llamacode/ctgamma.git
+> # !REPO_PATH = $2
+> # !CHECKOUT = CTGamma/To-Do CTGamma/doc CTGamma/par
+> # CTGamma/CTGBase
+> # CTGamma/CTGConstraints
+> # CTGamma/CTGEvolution
+> # CTGamma/CTGGauge
+> # CTGamma/CTGMatter
+> # CTGamma/CTGRadiativeBC
+> # CTGamma/CartesianCoordinates
+> # CTGamma/Psiclops
+> 
+> 
+> 
+> # # Zelmani
+> # !TARGET   = $ARR
+> # !TYPE     = git
+> # !URL      = carpetgit@stellarcollapse.org:Zelmani.git
+> # !REPO_PATH = $2
+> # !CHECKOUT = 
+> # Zelmani/CarpetRegridOnce
+> # #Zelmani/CartesianCoordinates
+> # Zelmani/CCCCGlobalModes
+> # Zelmani/CoreCollapseControl
+> # Zelmani/EOS_Omni
+> # Zelmani/GRHydro
+> # #Zelmani/MoL
+> # Zelmani/PNSHelper
+> # Zelmani/TimeDerivative
+> # #Zelmani/Whisky_RNSID
+> # Zelmani/ZelmaniAnalysis
+> # Zelmani/ZelmaniHybridCool
+> # Zelmani/ZelmaniLeak
+> # Zelmani/ZelmaniM1
+> # Zelmani/ZelmaniRayleighTaylorTest
+> # Zelmani/ZelmaniShockTracker
+> # Zelmani/ZelmaniShockTracker2
+> # Zelmani/ZelmaniStarMapper
+> # Zelmani/ZelmaniQuadWaveExtract
+> 
+> 
+> 
+> # DGFE
+> !TARGET   = $ARR
+> !TYPE     = git
+> !URL      = git@bitbucket.org:dradice/advecthrsc.git
+> !AUTH_URL = git@bitbucket.org:dradice/advecthrsc.git
+> !REPO_PATH = ../../arrangements/$1/../../repos/advecthrsc
+> !CHECKOUT =
+> DGFE/AdvectHRSC
+> !TARGET   = $ARR
+> !TYPE     = git
+> !URL      = git@bitbucket.org:dradice/cpputils.git
+> !AUTH_URL = git@bitbucket.org:dradice/cpputils.git
+> !REPO_PATH = ../../arrangements/$1/../../repos/cpputils
+> !CHECKOUT =
+> DGFE/CPPUtils
+> #DGFE/EOS_Simple
+> #DGFE/EulerHRSC
+> !TARGET   = $ARR
+> !TYPE     = git
+> !URL      = git@bitbucket.org:dradice/fdcore.git
+> !AUTH_URL = git@bitbucket.org:dradice/fdcore.git
+> !REPO_PATH = ../../arrangements/$1/../../repos/fdcore
+> !CHECKOUT =
+> DGFE/FDCore
+> #DGFE/GREuler
+> !TARGET   = $ARR
+> !TYPE     = git
+> !URL      = git@bitbucket.org:dradice/filter.git
+> !AUTH_URL = git@bitbucket.org:dradice/filter.git
+> !REPO_PATH = ../../arrangements/$1/../../repos/filter
+> !CHECKOUT =
+> DGFE/Filter
+> !TARGET   = $ARR
+> !TYPE     = git
+> !URL      = git@bitbucket.org:dradice/hrsccore.git
+> !AUTH_URL = git@bitbucket.org:dradice/hrsccore.git
+> !REPO_BRANCH = sdgm
+> !REPO_PATH = ../../arrangements/$1/../../repos/hrsccore
+> !CHECKOUT =
+> DGFE/HRSCCore
+> !TARGET   = $ARR
+> !TYPE     = git
+> !URL      = git@bitbucket.org:dradice/sdgmgrid.git
+> !AUTH_URL = git@bitbucket.org:dradice/sdgmgrid.git
+> !REPO_PATH = ../../arrangements/$1/../../repos/sdgmgrid
+> !CHECKOUT =
+> DGFE/SDGMGrid
+> !TARGET   = $ARR
+> !TYPE     = git
+> !URL      = git@bitbucket.org:dradice/wavetoydgfe.git
+> !AUTH_URL = git@bitbucket.org:dradice/wavetoydgfe.git
+> !REPO_PATH = ../../arrangements/$1/../../repos/wavetoydgfe
+> !CHECKOUT =
+> DGFE/WaveToyDGFE
+> 
+> 
+> 
+> # # NewSchedule
+> # !TARGET   = $ARR
+> # !TYPE     = svn
+> # !AUTH_URL = https://svn.cactuscode.org/projects/NewSchedule/$1/trunk/$2
+> # !URL      = https://svn.cactuscode.org/projects/NewSchedule/$1/trunk/$2
+> # !CHECKOUT =
+> # WaveToySimple/IDScalarWaveC
+> # WaveToySimple/SimpleWave
+> # WaveToySimple/WaveToyC
+> 
+> 
+> 
+> # # Private thorns
+> # !TARGET   = $ARR
+> # !TYPE     = ignore
+> # !CHECKOUT = 
+> # EloisaBentivegna/SFBubble
+> # #PauFigueras/WavePF
