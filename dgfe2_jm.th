@@ -220,9 +220,8 @@ CactusPUGHIO/IOHDF5Util
 !TYPE     = git
 !URL      = https://bitbucket.org/cactuscode/cactustest.git
 !REPO_PATH= $2
-!CHECKOUT = CactusTest/TestAllTypes
+!CHECKOUT = CactusTest/TestArrays
 #DISABLED CactusTest/TestAllTypes
-CactusTest/TestArrays
 CactusTest/TestComplex
 CactusTest/TestCoordinates
 CactusTest/TestFortranCrayPointers
